@@ -8,6 +8,7 @@ export default class MeetingRoom extends LightningElement {
     @wire(CurrentPageReference) pageReference123; //pageReference123 holds the actual (Lightning)page reference of our meeting room component
 
     tileClickHandler(){
+        /* data transfer from chield to parent */
         const titleClicked=new CustomEvent('tileclick',{detail:this.meetingRoomInfo,bubbles:true});
         
         this.dispatchEvent(titleClicked);
